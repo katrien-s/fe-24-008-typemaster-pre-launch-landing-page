@@ -94,10 +94,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Grid By Example](https://gridbyexample.com/examples/example29/) - This code-example helped me to work out the rough version of the grid for the `cta-container`.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) - I saw it mentioned by Jes Chan in one of her YouTube video's by [Coder Coder](https://www.youtube.com/@TheCoderCoder) that she uses these Bootstrap-breakpoints setting, in order to have a smooth transition the responsive layout across device or viewport sizes. I took inspiration here to set my media-queries.
+- [How to Use HTML5 “picture”, “srcset”, and “sizes” for Responsive Images](https://webdesign.tutsplus.com/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015t)
 
 ## Author
 
