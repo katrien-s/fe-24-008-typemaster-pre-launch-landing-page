@@ -113,9 +113,18 @@ header {
 	}
 }
 
-.img {
+.image-container {
 	border-radius: 20px;
+	max-height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.img {
 	height: 100%;
+	width: 100%;
 }
 
 .product-exhibit {
@@ -128,15 +137,15 @@ header {
 	grid-column: 1/-1;
 }
 
-.product-exhibit img:nth-of-type(1) {
+.product-image-hero {
 	grid-column: 1/-1;
 }
 
-.product-exhibit img:nth-of-type(2) {
+.product-image-coloured {
 	grid-column: 1/5;
 }
 
-.product-exhibit img:nth-of-type(3) {
+.product-image-large {
 	grid-column: 5/-1;
 }
 
@@ -156,32 +165,35 @@ header {
 	.product-exhibit {
 		column-gap: 40px;
 		row-gap: 30px;
-		grid-template-rows: minmax(20rem, 30rem) minmax(20rem, 30rem) auto;
 	}
 
 	.product-text-hero {
-		grid-column: 1/8;
+		grid-column: 1/7;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	.product-exhibit img:nth-of-type(1) {
+	.product-image-hero {
 		grid-column: 8/-1;
+		height: 425px;
 	}
 
-	.product-exhibit img:nth-of-type(2) {
+	.product-image-coloured {
 		grid-column: 1/5;
+		height: 320px;
 	}
 
-	.product-exhibit img:nth-of-type(3) {
+	.product-image-large {
 		grid-column: 5/-1;
+		height: 320px;
 	}
 
 	.product-text-info {
 		display: flex;
 		align-items: center;
 		gap: 36px;
+    padding-top: 42px;
 	}
 
 	.product-text-info h2 {
@@ -198,20 +210,24 @@ header {
 		grid-column: 1/6;
 	}
 
-	.product-exhibit img:nth-of-type(1) {
+	.image-container {
+		height: 480px;
+	}
+
+	.product-image-hero {
 		grid-column: 7/-1;
 	}
 
-	.product-exhibit img:nth-of-type(2) {
+	.product-image-coloured {
 		grid-column: 1/4;
 	}
 
-	.product-exhibit img:nth-of-type(3) {
+	.product-image-large {
 		grid-column: 4/9;
 	}
 
 	.product-text-info {
-		grid-column: 9/-1;
+		grid-column: 10/-1;
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -223,8 +239,8 @@ header {
 
 .option-cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1.875rem;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 60px;
 }
 
 .icon {
@@ -246,6 +262,10 @@ header {
 }
 
 @media (min-width: 40em) {
+	.option-cards {
+		margin-block-start: 142px;
+	}
+
 	.icon,
 	.option-card h3 {
 		margin-inline: unset;
@@ -257,6 +277,12 @@ header {
 
 	.option-card h3 {
 		margin-block-start: 2.5rem;
+	}
+}
+
+@media (min-width: 60em) {
+	.option-cards {
+		margin-block-start: 168px;
 	}
 }
 
