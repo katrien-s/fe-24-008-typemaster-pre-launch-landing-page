@@ -19,23 +19,27 @@
 		<link rel="stylesheet" href="styles.css" />
 		<title>Frontend Mentor | Typemaster pre-launch landing page</title>
 	</head>
-	<body>
-		<header class="wrapper flex">
+	<body class="wrapper">
+		<header class="primary-header | flex justify-content-sb align-items-c">
 			<img src="assets/shared/logo.svg" alt="" width="40" height="40" />
-			<a href="#" class="btn btn-neutral">Pre-order now </a>
+			<a href="#" class="button button-neutral">Pre-order now </a>
 		</header>
-		<main>
-			<section class="wrapper">
-				<article class="product-exhibit">
+		<main id="main">
+			<section id="product">
+				<article class="grid-container grid-container--product">
 					<div class="product-text product-text-hero">
-						<h1>Typemaster keyboard</h1>
-						<p>
+						<h1 class="fs-900 uppercase fw-900 line-height-1">
+							Typemaster keyboard
+						</h1>
+						<p class="fs-400 fw-500 text-primary-400">
 							Improve your productivity and gaming without breaking the bank.
 							Upgrade to a high quality mechanical typing experience.
 						</p>
-						<div class="cta flex">
-							<p><a href="#" class="btn btn-accent">Pre-order now</a></p>
-							<p class="release-date">Release on 5/27</p>
+						<div class="cta flex align-items-c">
+							<p class="button button-accent | bg-accent-900 text-neutral-100">
+								<a href="#">Pre-order now</a>
+							</p>
+							<p class="fs-400 fw-500 text-primary-400">Release on 5/27</p>
 						</div>
 					</div>
 
@@ -67,7 +71,7 @@
 						/>
 					</div>
 
-					<div class="image-container  product-image-large">
+					<div class="image-container product-image-large">
 						<img
 							src="/assets/mobile/image-glass-and-keyboard.jpg"
 							srcset="
@@ -82,8 +86,10 @@
 					</div>
 
 					<div class="product-text product-text-info align-center-mobile">
-						<h2>Mechanical wireless keyboard</h2>
-						<p>
+						<h2 class="fs-800 uppercase fw-900 line-height-2">
+							Mechanical wireless keyboard
+						</h2>
+						<p class="fs-400 fw-500 text-primary-400">
 							The Typemaster keyboard boasts top-notch build and practical
 							design. It offers a wide variety of switches and keycaps, along
 							with reliable wireless connectivity.
@@ -91,13 +97,15 @@
 					</div>
 				</article>
 			</section>
-			<section class="option-cards | wrapper | align-center-mobile">
+			<section class="option-cards | align-center-mobile">
 				<div class="option-card">
 					<div class="icon" width="65" height="65">
 						<img src="assets/shared/icon-compatible.svg" alt="" class="svg" />
 					</div>
-					<h3>Highly compatible</h3>
-					<p>
+					<h3 class="fs-700 uppercase fw-900 line-height-2">
+						Highly compatible
+					</h3>
+					<p class="fs-400 fw-500 text-primary-400">
 						Easy to use and works well with all major computer brands, gaming
 						consoles and mobile devices. Plug & play, no installation or driver
 						needed.
@@ -107,8 +115,10 @@
 					<div class="icon" width="65" height="65">
 						<img src="assets/shared/icon-bluetooth.svg" alt="" class="svg" />
 					</div>
-					<h3>Wireless with bluetooth</h3>
-					<p>
+					<h3 class="fs-700 uppercase fw-900 line-height-2">
+						Wireless with bluetooth
+					</h3>
+					<p class="fs-400 fw-500 text-primary-400">
 						Powerful 2.4G RF technology allows you to connect the cordless
 						keyboard from up to 30ft away. Simply plug the unifying receiver
 						into your computer.
@@ -118,8 +128,10 @@
 					<div class="icon" width="65" height="65">
 						<img src="assets/shared/icon-battery.svg" alt="" class="svg" />
 					</div>
-					<h3>High capacity battery</h3>
-					<p>
+					<h3 class="fs-700 uppercase fw-900 line-height-2">
+						High capacity battery
+					</h3>
+					<p class="fs-400 fw-500 text-primary-400">
 						Equipped with a long-lasting built-in battery, you’ll never have to
 						spend a dime on replaceable ones.  Enjoy 40 hours of usage time
 						between charges.
@@ -129,8 +141,11 @@
 					<div class="icon" width="65" height="65">
 						<img src="assets/shared/icon-light.svg" alt="" class="svg" />
 					</div>
-					<h3>RGB backlit modes</h3>
-					<p>
+
+					<h3 class="fs-700 uppercase fw-900 line-height-2">
+						RGB backlit modes
+					</h3>
+					<p class="fs-400 fw-500 text-primary-400">
 						Choose from 4 backlight brightness levels and adjustable breathing
 						speed. Each key glows intensely in the dark and helps you type in
 						low light conditions.
@@ -140,7 +155,7 @@
 		</main>
 
 		<footer>
-			<p class="small-text">
+			<p class="fs-400 fw-500 text-primary-400">
 				<strong>Typemaster 2024 </strong>| All Rights Reserved
 			</p>
 		</footer>
