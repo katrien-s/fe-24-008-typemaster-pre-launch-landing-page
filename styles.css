@@ -119,8 +119,20 @@ select {
 	flex-wrap: wrap;
 }
 
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
 .justify-content {
-  justify-content: space-between;
+	justify-content: space-between;
+}
+
+.justify-content-c {
+	justify-content: center;
 }
 
 .grid {
@@ -130,6 +142,10 @@ select {
 
 .d-block {
 	display: block;
+}
+
+.text-align-c {
+	text-align: center;
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -308,16 +324,24 @@ select {
 }
 
 .typography-box {
-  display: flex;
-  border-radius: 1rem;
-  color: hsl(var(--clr-primary-900));
-  background-color: hsl(var(--clr-neutral-400));
-  padding: 3.5rem;
-  justify-content: space-between;
-  align-items: start;
+	display: flex;
+	border-radius: 1rem;
+	color: hsl(var(--clr-primary-900));
+	background-color: hsl(var(--clr-neutral-400));
+	padding: 3.5rem;
+	justify-content: space-between;
+	align-items: start;
 }
 
+/* Components */
 
+button {
+	border: transparent;
+	border-radius: 0.5rem;
+	padding: 1rem 1.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
 
 /* ------------- */
 .wrapper {

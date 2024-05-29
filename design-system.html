@@ -170,37 +170,65 @@
 								</p>
 							</div>
 						</div>
-
-						<div style="flex-basis: 100%">
-							<div>
-								<p class="text-primary-900 fw-500 fs-400">
-									Body - Barlow Medium - 16 px - 26 px Line
-								</p>
-								<p class="fs-400 fw-500 text-primary-400">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-									Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In
-									nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed
-									pretium, ligula sollicitudin laoreet viverra, tortor libero
-									sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-									Ut justo. Suspendisse potenti.
-								</p>
-								<p class="fs-400 fw-500 text-primary-400">
-									Sed egestas, ante et vulputate volutpat, eros pede semper est,
-									vitae luctus metus libero eu augue. Morbi purus libero,
-									faucibus adipiscing, commodo quis, gravida id, est. Sed
-									lectus. Praesent elementum hendrerit tortor. Sed semper lorem
-									at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi
-									neque euismod dui, eu pulvinar nunc sapien ornare nisl.
-									Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed,
-									urna.
-								</p>
-							</div>
+						<div style="flex-basis: 100%; --flow-space: 2rem" class="flow">
+							<p class="text-primary-900 fw-500 fs-400">
+								Body - Barlow Medium - 16 px - 26 px Line
+							</p>
+							<p class="fs-400 fw-500 text-primary-400">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
+								neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+								ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+								eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+								Suspendisse potenti.
+							</p>
+							<p class="fs-400 fw-500 text-primary-400">
+								Sed egestas, ante et vulputate volutpat, eros pede semper est,
+								vitae luctus metus libero eu augue. Morbi purus libero, faucibus
+								adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent
+								elementum hendrerit tortor. Sed semper lorem at felis.
+								Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod
+								dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu,
+								dapibus eu, fermentum et, dapibus sed, urna.
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="buttons">
+			<section id="interactive-elements">
 				<h2 class="numbered-title"><span>03</span>buttons</h2>
+
+				<!-- Buttons -->
+				<div class="flex justify-content-c">
+					<div class="button-accent | flex flex-column" style="--gap: 2.5rem">
+						<p class="fs-400 fw-500 text-primary-400 text-align-c">
+							Button 1 - Normal State
+						</p>
+						<button class="bg-accent-900 text-neutral-100">
+							<span>pre-order now</span>
+						</button>
+						<p class="fs-400 fw-500 text-primary-400 text-align-c">
+							Button 1 - Hover State
+						</p>
+						<button class="bg-accent-400 text-neutral-100">
+							<span>pre-order now</span>
+						</button>
+					</div>
+					<div class="button-neutral | flex flex-column" style="--gap: 2.5rem">
+						<p class="fs-400 fw-500 text-primary-400 text-align-c">
+							Button 2 - Normal State
+						</p>
+						<button class="bg-neutral-400 text-primary-900">
+							<span>pre-order now</span>
+						</button>
+						<p class="fs-400 fw-500 text-primary-400 text-align-c">
+							Button 2 - Hover State
+						</p>
+						<button class="bg-primary-900 text-neutral-100">
+							<span>pre-order now</span>
+						</button>
+					</div>
+				</div>
 			</section>
 		</div>
 	</body>
