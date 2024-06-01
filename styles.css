@@ -68,11 +68,21 @@ p {
 	font-weight: 400;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
 body {
 	font-family: var(--ff-sans-normal);
-	color: var(--clr-primary-500);
 	line-height: 1.6;
-	background-color: var(--clr-neutral-100);
+	text-wrap: pretty;
+	color: hsl(var(--clr-primary-500));
+	background-color: hsl(var(--clr-neutral-100));
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: min-content 1fr;
@@ -157,7 +167,7 @@ select {
 	text-align: center;
 }
 
-.flow > *:where(:not(:first-child)) {
+.flow > * {
 	margin-top: var(--flow-space, 1rem);
 }
 
@@ -383,8 +393,6 @@ button,
 
 .icon {
 	background-color: hsl(var(--clr-accent-900));
-	margin-inline: auto;
-	margin-block-start: 4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -397,26 +405,70 @@ button,
 /* Layout            */
 /* ----------------  */
 
-.wrapper {
-	padding-inline: unset;
-}
+/* Product Layout */
 
 .grid-container {
 	display: grid;
-	grid-template-columns: minmax(1rem, 1fr) 1fr minmax(1rem, 1fr);
-	gap: 24px;
-	grid-template-areas: ;
-
-	/* margin-inline: 2em; */
+	grid-template-columns:
+		minmax(1rem, 1fr)
+		minmax(280px, 1fr)
+		minmax(1rem, 1fr);
+	margin-inline: auto;
 }
 
-/* Product Layout */
+.grid-container > * {
+	grid-column: 2;
+}
 
-.grid-container--product {
+.grid-container--cards {
+	--flow-space: 4rem;
+	grid-template-areas:
+		'. card1 .'
+		'. card2 .'
+		'. card3 .'
+		'. card4 .';
+}
+
+.card:nth-of-type(1) {
+	grid-area: card1;
+}
+.card:nth-of-type(2) {
+	grid-area: card2;
+}
+.card:nth-of-type(3) {
+	grid-area: card3;
+}
+.card:nth-of-type(4) {
+	grid-area: card4;
+}
+
+@media (min-width: 35em) {
+	.grid-container {
+		column-gap: var(--container-gap, 1.8755rem);
+		grid-template-columns:
+			minmax(1rem, 1fr)
+			repeat(12, 1fr)
+			minmax(1rem, 1fr);
+	}
+
+	.grid-container--cards {
+		grid-template-areas:
+			'. card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2 .'
+			'. card3 card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 .';
+	}
+}
+
+@media (min-width: 60em) {
+	.grid-container--cards {
+		grid-template-areas: '. card1 card1 card1 card2 card2 card2 card3 card3 card3 card4 card4 card4 .';
+	}
+}
+
+/* .grid-container--product {
 	/* --flow-space: 2rem; */
-}
+/* } */
 
-.product-text-hero {
+/* .product-text-hero {
 	grid-area: hero-text;
 }
 
@@ -438,9 +490,9 @@ button,
 
 .cta {
 	margin-block-start: 2em;
-}
+} */
 
-@media (min-width: 40em) {
+/* @media (min-width: 40em) {
 	.cta {
 		margin-block-start: 2em;
 	}
@@ -482,9 +534,9 @@ button,
 	.product-text-info h2 {
 		margin-bottom: unset;
 	}
-}
+} */
 
-@media (min-width: 60em) {
+/* @media (min-width: 60em) {
 	.product-exhibit {
 		gap: 30px;
 	}
@@ -518,7 +570,7 @@ button,
 	.product-text-info h2 {
 		margin-bottom: unset;
 	}
-}
+} */
 
 /* Typography */
 h1 {
@@ -555,7 +607,7 @@ a {
 
 /* Header */
 
-header {
+/* header {
 	padding-block: 1.5em 4em;
 }
 
@@ -572,9 +624,9 @@ header {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-}
+} */
 
-.product-text-hero {
+/* .product-text-hero {
 	grid-column: 1/-1;
 }
 
@@ -596,9 +648,9 @@ header {
 
 .cta {
 	margin-block-start: 2em;
-}
+} */
 
-@media (min-width: 40em) {
+/* @media (min-width: 40em) {
 	.cta {
 		margin-block-start: 2em;
 	}
@@ -640,9 +692,9 @@ header {
 	.product-text-info h2 {
 		margin-bottom: unset;
 	}
-}
+} */
 
-@media (min-width: 60em) {
+/* @media (min-width: 60em) {
 	.product-exhibit {
 		gap: 30px;
 	}
@@ -676,43 +728,27 @@ header {
 	.product-text-info h2 {
 		margin-bottom: unset;
 	}
+} */
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1.5rem;
 }
 
-.option-cards {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 60px;
+.card h3 {
+	/* max-width: 40ch; */
+	/* margin-inline: auto; */
+	/* margin-block: 3rem 1.5rem; */
 }
 
-.option-card h3 {
-	max-width: 15ch;
-	margin-inline: auto;
-	margin-block: 3rem 1.5rem;
-}
-
-@media (min-width: 40em) {
-	.option-cards {
-		margin-block-start: 142px;
-	}
-
-	.icon,
-	.option-card h3 {
-		margin-inline: unset;
-	}
-
-	.icon {
-		margin-block-start: 2.6rem;
-	}
-
-	.option-card h3 {
-		margin-block-start: 2.5rem;
-	}
-}
-
-@media (min-width: 60em) {
-	.option-cards {
-		margin-block-start: 168px;
-	}
+@media (min-width: 35em) {
+  .card {
+    align-items: start;
+    text-align: left;
+  }
 }
 
 footer {
