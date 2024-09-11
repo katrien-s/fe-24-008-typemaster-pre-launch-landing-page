@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+}
+
+.mw {
+	max-width: 60rem;
+	margin-inline: auto;
+}
+
+.mw-min {
+	width: min(100% - 40px, 60rem);
+	margin-inline: auto;
+}
+
+.padding {
+	padding-block: clamp(2rem, 0.18rem + 7.75vw, 6rem);
+}
+
+.bg-magenta {
+	background-color: magenta;
+}
+
+.fb-wrapper {
+	display: grid;
+	grid-template-columns: 1fr min(100% - 40px, 60rem) 1fr;
+}
+
+/* To center all the grid-children in the middle */
+.fb-wrapper > * {
+	grid-column: 2;
+}
+
+/* To have the grid-child full bleed */
+.fb-wrapper > .fullbleed {
+	grid-column: 1/-1;
+}
+
+.bg-image {
+	background-image: url(nasa-hubble-space-telescope-6UwNDw4Sy2g-unsplash.jpg);
+	background-size: cover;
+	background-position: 50%;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bg-blue {
+	background-color: blue;
+}
+
+.fb-col-wrapper {
+	--space-lr: 40px;
+	--space-gap: 20px;
+	--col-count: 2;
+
+	display: grid;
+	grid-template-columns:
+		1fr repeat(
+			var(--col-count),
+			calc(
+				(
+						min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) *
+							var(--space-gap)
+					) / var(--col-count)
+			)
+		)
+		1fr;
+	gap: var(--space-gap);
+}
+
+@media (width >= 43.75em) {
+	/* tablet 700px */
+	.fb-col-wrapper {
+		--space-lr: 80px;
+		--space-gap: 30px;
+		--col-count: 6;
+	}
+}
+
+@media (width >= 62.5em) {
+	/* desktop 1000px */
+	.fb-col-wrapper {
+		--col-count: 12;
+	}
+}
+
+.card {
+	padding: 1rem 1.5rem;
+	grid-column: 2 / -2;
+}
+
+.img {
+	grid-column: 2 / -1;
+}
+
+@media (width >= 43.75em) {
+	.card {
+		grid-column: 2 / 5;
+	}
+
+	.img {
+		grid-column: 5 / -1;
+	}
+}
+
+@media (width >= 62.5em) {
+	.card {
+		grid-column: 2 / 8;
+	}
+
+	.img {
+		grid-column: 8 / -1;
+	}
+}

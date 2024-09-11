@@ -96,6 +96,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) - I saw it mentioned by Jes Chan in one of her YouTube video's by [Coder Coder](https://www.youtube.com/@TheCoderCoder) that she uses these Bootstrap-breakpoints setting, in order to have a smooth transition the responsive layout across device or viewport sizes. I took inspiration here to set my media-queries.
 - [How to Use HTML5 “picture”, “srcset”, and “sizes” for Responsive Images](https://webdesign.tutsplus.com/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015t)
+- [How to make full bleed wrappers with CSS grid](https://www.youtube.com/watch?v=6l24PIccgqU) - A video by [Coder Coder](https://www.youtube.com/@TheCoderCoder) again
 
 ## Author
 
