@@ -411,7 +411,7 @@ button,
 	display: grid;
 	grid-template-columns:
 		minmax(1rem, 1fr)
-		minmax(280px, 1fr)
+		repeat(6, minmax(40px, 1fr))
 		minmax(1rem, 1fr);
 	margin-inline: auto;
 }
@@ -419,6 +419,38 @@ button,
 .grid-container > * {
 	grid-column: 2;
 }
+
+/* Product */
+
+.grid-container--product {
+	/* display: grid; */
+	grid-template-columns:
+		minmax(1rem, 1fr)
+		repeat(6, minmax(40px, 1fr))
+		minmax(1rem, 1fr);
+	grid-template-areas:
+		'. hero-text hero-text hero-text hero-text hero-text hero-text .'
+		'. hero-image hero-image hero-image hero-image hero-image hero-image .'
+		'coloured coloured coloured large large .';
+}
+
+.hero-product--text {
+	grid-area: hero-text;
+}
+
+.hero-product--image {
+	grid-area: hero-image;
+}
+
+.product-image--coloured {
+	grid-area: coloured;
+}
+
+.product-image--large {
+	grid-area: large;
+}
+
+/* Cards */
 
 .grid-container--cards {
 	--flow-space: 4rem;
@@ -745,10 +777,10 @@ a {
 }
 
 @media (min-width: 35em) {
-  .card {
-    align-items: start;
-    text-align: left;
-  }
+	.card {
+		align-items: start;
+		text-align: left;
+	}
 }
 
 footer {
