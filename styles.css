@@ -431,6 +431,7 @@ header {
 .product-text-info h2 {
 	max-width: 15ch;
 	margin-inline: auto;
+  margin-bottom: 1.5rem;
 }
 
 @media (width >= 43.75em) {
