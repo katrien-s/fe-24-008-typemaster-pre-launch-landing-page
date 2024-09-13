@@ -20,11 +20,7 @@
 	--fs-900: clamp(3rem, 2.75rem + 1.09vw, 3.5rem);
 	--fs-800: 2rem;
 	--fs-700: 1.5rem;
-	--fs-600: ;
-	--fs-500: ;
 	--fs-400: 1rem;
-	--fs-300: ;
-	--fs-200: ;
 
 	--ff-sans-normal: 'Barlow', sans-serif;
 
@@ -108,6 +104,7 @@ select {
 }
 
 a {
+  color: unset;
 	text-decoration: none;
 }
 
@@ -164,18 +161,6 @@ a {
 
 .d-block {
 	display: block;
-}
-
-.text-align-c {
-	text-align: center;
-}
-
-.flow > * {
-	margin-top: var(--flow-space, 1rem);
-}
-
-.flow--space-small {
-	--flow-space: 0.75rem;
 }
 
 .wrapper {
@@ -262,10 +247,6 @@ a {
 
 .uppercase {
 	text-transform: uppercase;
-}
-
-a {
-	color: unset;
 }
 
 .fs-900 {
@@ -368,7 +349,7 @@ button,
 	align-items: center;
 	width: 65px;
 	height: 65px;
-	border-radius: 16px;
+	border-radius: var(--border-radius);
 }
 
 /* ----------------  */
@@ -453,10 +434,6 @@ header {
 }
 
 @media (width >= 43.75em) {
-	.grid-container--product {
-		grid-template-rows: ;
-	}
-
 	.hero-product--text {
 		grid-column: 2/8;
 		margin-bottom: unset;
@@ -518,7 +495,6 @@ header {
 
 	.only-on-desktop {
 		background-color: hsl(var(--clr-neutral-400));
-
 		height: 240px;
 	}
 
