@@ -105,7 +105,7 @@ select {
 }
 
 a {
-  color: unset;
+	color: unset;
 	text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ a {
 	gap: 24px;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	.wrapper {
 		width: min(100vw - 4.5rem, 69rem);
 	}
@@ -336,7 +336,7 @@ button,
 	background-color: hsl(var(--clr-primary-900));
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	button,
 	.button {
 		padding: 1rem 1.5rem;
@@ -363,13 +363,13 @@ header {
 	margin-block: 1.5rem 4rem;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	header {
 		margin-block: 2.5rem 3.75rem;
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	header {
 		margin-block: 3.43rem 5rem;
 	}
@@ -432,10 +432,10 @@ header {
 .product-text-info h2 {
 	max-width: 15ch;
 	margin-inline: auto;
-  margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	.hero-product--text {
 		grid-column: 2/8;
 		margin-bottom: unset;
@@ -484,7 +484,7 @@ header {
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	.hero-product--text {
 		grid-column: 2/7;
 	}
@@ -559,7 +559,7 @@ header {
 	margin-top: 1.5rem;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	.card {
 		align-items: start;
 		text-align: left;
@@ -590,7 +590,7 @@ header {
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	main section:nth-of-type(2) {
 		margin-top: 10rem;
 	}
@@ -616,7 +616,7 @@ footer {
 	margin-block: 6rem 3.125rem;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	footer {
 		margin-block: 8rem 2.5rem;
 	}
